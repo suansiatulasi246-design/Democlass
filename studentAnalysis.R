@@ -31,3 +31,12 @@ summary(model)
 # Predict score for a new student
 new_student <- data.frame(Study_Hours = 7)
 predict(model, new_student)
+
+
+# Save plot as image
+png("output_plot.png")
+plot(data_clean$Study_Hours, data_clean$Score,
+     main = "Study Hours vs Score",
+     xlab = "Study Hours",
+     ylab = "Score")
+dev.off()
